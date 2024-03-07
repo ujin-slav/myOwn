@@ -1,0 +1,31 @@
+<div *ngIf="isOpen">
+    <div class="jw-modal">
+        <div class="jw-modal-body">
+            <ng-content></ng-content>
+            <input #box (keyup)="onChangeSearchInput(box.value)" matInput placeholder=""/>
+            <div *ngIf="!isLoading">
+                <div
+                class="example-card margin-top-bottom-10"
+                *ngFor="let item of posts; let i = index">
+                <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title-group>
+                    <mat-card-title>{{item.id}}</mat-card-title>
+                    <mat-card-subtitle>{{item.title}}</mat-card-subtitle>
+                    <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    {{item.body}}
+                </mat-card-content>
+                </mat-card>
+                </div>
+            </div>
+            <div *ngIf="isLoading"> 
+                <div class="loader">Loading...</div>
+            </div>
+            <button (click)="onShow()">Close</button>
+        </div>
+    </div>
+    <div class="jw-modal-background"></div>
+</div>
