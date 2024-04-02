@@ -17,7 +17,8 @@
   </mat-card>
 <div 
 class="example-card margin-top-bottom-10"
-*ngFor="let item of posts; let i = index">
+*ngFor="let item of posts; let i = index"
+[@simpleFadeAnimation]="'in'">
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title-group>

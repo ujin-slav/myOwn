@@ -24,7 +24,10 @@
             <div *ngIf="isLoading"> 
                 <div class="loader">Loading...</div>
             </div>
-            <button (click)="onShow()">Close</button>
+            <button [@openClose]="isOpen ? 'open':'closed'" (click)="onShow()">Close</button>
+            <div>
+            <button [@openClose]="testAnimation ? 'closed':'open'" (click)="toggle()">Test</button>
+            </div>
         </div>
     </div>
     <div class="jw-modal-background"></div>
