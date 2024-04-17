@@ -77,5 +77,8 @@ export class AppComponent {
   onShow(){
     this.modal.onShow()
   }
+  showMessage():string{
+    return "Hello"
+  }
 }
 

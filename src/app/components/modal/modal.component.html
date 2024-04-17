@@ -5,7 +5,7 @@
             <input #box (keyup)="onChangeSearchInput(box.value)" matInput placeholder=""/>
             <div *ngIf="!isLoading">
                 <div
-                class="example-card margin-top-bottom-10"
+                class="example-card margin-top-bottom-10 card"
                 *ngFor="let item of posts; let i = index">
                 <mat-card class="example-card">
                 <mat-card-header>

@@ -10,3 +10,6 @@ export const getPostsFailure = createAction(
   '[Posts] Get Posts failure',
   props<{ error: string }>()
 );
+export const PostsActions = {
+  getPosts, getPostsSuccess, getPostsFailure
+}

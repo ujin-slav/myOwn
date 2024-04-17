@@ -79,10 +79,12 @@ export class ModalComponent implements OnInit {
           .subscribe({
             next: (data: IPost[]) => {
               this.isLoading=true
-              setTimeout(()=>{
-                this.posts=data  
-                this.isLoading=false      
-              },3000)
+              // setTimeout(()=>{
+              //   this.posts=data  
+              //   this.isLoading=false      
+              // },3000)
+              this.posts=data  
+              this.isLoading=false     
             }
     });
     //this.store.dispatch(PostsActions.getPosts());

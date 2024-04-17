@@ -11,12 +11,13 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent,
-    ModalComponent
+    ModalComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +31,7 @@ import { EffectsModule } from '@ngrx/effects';
     EffectsModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
